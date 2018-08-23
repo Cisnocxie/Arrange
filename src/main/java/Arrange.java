@@ -22,17 +22,24 @@ public class Arrange {
     }
 
     public static List<String> cal(String input) {
-        if (input.length() ==1) {
-            return Collections.singletonList(input);
-        } else {
-            List<String> result = new ArrayList<>();
-            for (int index = 0; index < input.length(); index++) {
-                List<String> subPermutations = cal(removeOneCharByIndex(input, index));
-                for (String subPermutation : subPermutations) {
-                    result.add(input.charAt(index)+subPermutation);
-                }
+        try {
+            if(input==null||input.length()==0){
+                throw new NullPointerException("input string should not be null or length should > 0");
             }
-            return  result;
+            if (input.length() ==1) {
+                return Collections.singletonList(input);
+            } else {
+                List<String> result = new ArrayList<>();
+                for (int index = 0; index < input.length(); index++) {
+                    List<String> subPermutations = cal(removeOneCharByIndex(input, index));
+                    for (String subPermutation : subPermutations) {
+                        result.add(input.charAt(index)+subPermutation);
+                    }
+                }
+                return  result;
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
         }
     }
 

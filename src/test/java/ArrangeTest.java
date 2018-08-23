@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class ArrangeTest {
 
@@ -45,4 +46,25 @@ public class ArrangeTest {
         //then
         assertEquals(results, Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba"));
     }
+
+
+    @Test
+    public void  should_return_catch_exception_when_input_string_witch_length_equals_0() {
+        try {
+            //given
+            String input = "";
+
+            //when
+            List<String > results = Arrange.cal(input);
+
+            //then
+            fail("should input string length >= 1");
+        } catch (Exception e) {
+
+        }
+    }
+
+
+
+
 }
