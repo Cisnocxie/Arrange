@@ -3,7 +3,6 @@ import java.util.List;
 
 public class Arrange {
     public static List<String> cal(String input) {
-
-        return Arrays.asList("a");
+        return Arrays.asList(input, input.substring(1, 2) + input.substring(0, 1));
     }
 }
