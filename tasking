@@ -1,0 +1,8 @@
+[leo cisnoc] first error test case
+
+//given
+input 1 chars "a"
+//when
+call  Arrange.cal(input);
+//then
+return list "[a]"
