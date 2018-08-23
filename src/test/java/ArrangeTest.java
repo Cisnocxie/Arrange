@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -18,5 +19,17 @@ public class ArrangeTest {
 
         //then
         assertEquals(results, Collections.singletonList("a"));
+    }
+
+    @Test
+    public void  should_return_ab_ba_when_input_ab() {
+        //given
+        String input = "ab";
+
+        //when
+        List<String > results = Arrange.cal(input);
+
+        //then
+        assertEquals(results, Arrays.asList("ab", "ba"));
     }
 }

@@ -6,3 +6,11 @@ input 1 chars "a"
 call  Arrange.cal(input);
 //then
 return list "[a]"
+
+
+//given
+input 2 chars "ab"
+//when
+call Arrange.cal(input);
+//then
+return list "[ab, ba]"
