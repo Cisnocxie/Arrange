@@ -32,4 +32,17 @@ public class ArrangeTest {
         //then
         assertEquals(results, Arrays.asList("ab", "ba"));
     }
+
+
+    @Test
+    public void  should_return_abc_acb_bac_bca_cab_cba_when_input_abc() {
+        //given
+        String input = "abc";
+
+        //when
+        List<String > results = Arrange.cal(input);
+
+        //then
+        assertEquals(results, Arrays.asList("abc", "acb", "bac", "bca", "cab", "cba"));
+    }
 }

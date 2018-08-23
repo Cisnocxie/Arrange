@@ -14,3 +14,10 @@ input 2 chars "ab"
 call Arrange.cal(input);
 //then
 return list "[ab, ba]"
+
+//given
+input 3 chars "abc"
+//when
+call Arrange.cal(input);
+//then
+return list "["abc", "acb", "bac", "bca", "cab", "cba"]"
